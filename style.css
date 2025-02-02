@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 * {
   border: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: inter, "sans serif";
 }
 
 :root {
@@ -13,9 +16,10 @@
   --header-black: rgba(0, 0, 0, 1);
 }
 
-html, body {
+html,
+body {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   /* overflow-x: hidden; */
 }
 
@@ -40,44 +44,40 @@ nav a {
 }
 
 .hero {
-  /* display: flex;
-  margin: 40px 80px;
-  height: 640px;
-  width: 100%;
-  max-width: 1200px;
-  border: 12px solid rgba(255, 255, 255, 1);
-  position: relative; */
+  position: relative;
   display: flex;
-  /* align-items: center; */
+  width: 100%;
+  max-width: calc(100% * 0.9);
+  margin: 40px 80px;
+  border-radius: 30px;
+  align-items: center;
 }
 
 .badge {
   position: absolute;
-  left: 900px;
+  left: 660px;
   top: 200px;
-  /* rotate: -180deg; */
 }
 
 .intro {
   background-color: var(--background-blue);
-  /* padding: 50px;
-  border-top-left-radius: var(--radius);
-  border-bottom-left-radius: var(--radius);
-  width: auto; */
+  padding: 50px;
+  width: 640px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .intro h1 {
   font-weight: 600;
   font-size: 64px;
   margin-top: 32px;
+  margin-bottom: 24px;
   width: 520px;
 }
 
 .intro p {
   color: var(--body-font);
   line-height: 28px;
-  width: 500px;
-  margin-top: 24px;
 }
 
 .hot-recipes {
@@ -116,18 +116,23 @@ nav a {
 
 .hero-bottom {
   display: flex;
-  gap: 0;
   margin-top: 100px;
+  justify-content: space-between;
 }
 
 .profile {
   display: flex;
+  align-items: center;
   gap: 16px;
 }
 
+.profile p {
+  font-size: 14px;
+  width: 100px;
+}
+
 .side-image {
-  max-width: 100%;
-  height: 640px;
+  margin-left: auto;
 }
 
 .hero-bottom button {
@@ -162,9 +167,10 @@ section[role="group"] {
 
   p {
     background-color: var(--background-blue);
-    width: 200px;
+    width: 240px;
     text-align: center;
     font-weight: 600;
+    font-size: 16px;
     padding: 20px 27px;
     border-radius: var(--radius);
   }
@@ -210,23 +216,40 @@ section[role="article"] {
   .tasty-recipes {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    margin: 96px 80px;
-    gap: 40px;
+    /* align-items: center; */
+    justify-content: center;
+    margin: 96px auto;
+    gap: 20px;
   }
 
   h3 {
     margin: 24px 0px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     width: 352px;
     padding: 0px 8px;
+    line-height: 32px;
   }
 
   .cards {
     background-color: var(--background-blue);
     border-radius: var(--radius);
     padding: 16px;
+    width: 400px;
+    position: relative;
+  }
+
+  .cards span {
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 48px;
+    width: 48px;
   }
 
   .timer-1 {
@@ -246,7 +269,7 @@ section[role="banner"] {
   margin: 143px 80px 160px;
 
   h2 {
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 600;
     color: var(--header-black);
     margin-bottom: 24px;
@@ -298,7 +321,11 @@ section[role="complementary"] {
     display: flex;
     flex-wrap: wrap;
     margin: 80px 0px;
-    gap: 40px;
+    gap: 20px;
+  }
+
+  .post {
+    width: 290px;
   }
 
   button {
@@ -330,7 +357,7 @@ section[role="contentinfo"] {
   }
 
   h2 {
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 600;
     width: 507px;
   }
@@ -345,16 +372,29 @@ section[role="contentinfo"] {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* justify-content: center; */
-    gap: 40px;
+    gap: 20px;
   }
 
   .cards-1 {
     width: 290px;
+    position: relative;
+  }
+
+  .cards-1 span {
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 48px;
+    width: 48px;
   }
 
   .cards-1:hover {
-    border: 2px solid cadetblue;
+    border: 1px solid cadetblue;
   }
 
   .timer-1 {
@@ -382,7 +422,7 @@ section[role="columnheader"] {
   margin: 80px;
 
   h1 {
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 600px;
   }
 
@@ -425,6 +465,9 @@ section[role="columnheader"] {
   font-size: 24px;
 }
 
+.social h5 {
+  width: 131px;
+}
 .social .icons {
   display: flex;
   flex-direction: column;
